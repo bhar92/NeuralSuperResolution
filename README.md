@@ -28,6 +28,11 @@ $ sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavc
 #### Download OpenCV source:
 ```
 $ cd ~
+$ wget -O opencv.zip https://github.com/opencv/opencv/archive/3.3.0.zip
+$ unzip opencv.zip
+```
+```
+$ cd ~
 $ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.3.0.zip
 $ unzip opencv_contrib.zip
 ```
@@ -77,7 +82,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D INSTALL_C_EXAMPLES=OFF \
       -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.3.0/modules \
       -D PYTHON_EXECUTABLE=~/.virtualenvs/cv/bin/python \
-      -D BUILD_EXAMPLES=ON ..      
+      -D BUILD_EXAMPLES=ON ..
 ```
 2. Build OpenCV!
 ```
@@ -94,7 +99,7 @@ $ cd /usr/local/lib/python3.5/site-packages/
 $ ls -l
 ```
 Here, you should see a file like ```cv2.cpython-35m-x86_64-linux-gnu.so```
-Go ahead and bravely rename it to cv.so:
+Go ahead and bravely rename it to cv2.so:
 ```
 sudo mv cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
 ```
@@ -116,7 +121,7 @@ pip install -r requirements.txt
 
 ## Usage
 ### Running the live webcam demo
-The code supports to scales of super-resolution: 4x and 8x.
+The code supports two scales of super-resolution: 4x and 8x.
 Packaged with the code are two pretrained models:
 1. `saved_models/coco4x_epoch_20.model` for 4x Super-Resolution
 2. `saved_models/coco8x_epoch_20.model` for 8x Super-Resolution
