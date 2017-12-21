@@ -1,17 +1,16 @@
 # Real-time Super-Resolution for Video Quality Improvement
 
 ## Introduction
-In this project, we find techniques to imrpove video quality in real-time for applications such as video-chat.
+This repository contains a pytorch implementation of an algorithm for single image super-resolution. The model uses the method described in [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](https://arxiv.org/abs/1603.08155) along with [Instance Normalization](https://arxiv.org/pdf/1607.08022.pdf). The code is based on the PyTorch Example code for [fast-neural-style](https://github.com/pytorch/examples/tree/master/fast_neural_style).
 
-The program is written in Python, and uses the Pytorch library for generating and loading the mode CNN models.
+The program is written in Python, and uses the Pytorch library for generating and loading the CNN models.
 
 ## Setup Instructions
 All the programs were tested on the following setup:
 ### Training Machine details:
-* CPU: 4x Intel(R) Core(TM) i5-7300HQ CPU @ 2.50GHz with 8 GB
-* GPU: GeForce GTX 1050 Ti with 4GB VRAM
-* Operating System: Ubuntu 16.04.3 LTS 
-* Kernel (_this should not matter_): Linux 4.10.0-40-generic (x86_64)
+* CPU: 4x Intel Core i5-7300HQ CPU with 8GB RAM
+* GPU: Nvidia GeForce GTX 1050 Ti with 4GB VRAM
+* Operating System: Ubuntu 16.04.3 LTS
 * CUDA version: release 8.0, V8.0.61
 * CuDNN: 6.0.21
 * OpenCV: 3.3.0
