@@ -1,9 +1,15 @@
 # Real-time Super-Resolution for Video Quality Improvement
 
 ## Introduction
-This repository contains a pytorch implementation of an algorithm for single image super-resolution. The model uses the method described in [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](https://arxiv.org/abs/1603.08155) along with [Instance Normalization](https://arxiv.org/pdf/1607.08022.pdf). The code is based on the PyTorch Example code for [fast-neural-style](https://github.com/pytorch/examples/tree/master/fast_neural_style).
+This repository contains a pytorch implementation of an algorithm for single image super-resolution applied to frames from a web-cam. The model uses the method described in [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](https://arxiv.org/abs/1603.08155) along with [Instance Normalization](https://arxiv.org/pdf/1607.08022.pdf). The code is based on the PyTorch Example code for [fast-neural-style](https://github.com/pytorch/examples/tree/master/fast_neural_style).
 
 The program is written in Python, and uses the Pytorch library for generating and loading the CNN models.
+
+An example of 4x super-resolution:
+![Shrek 4x Super-Resolution](https://i.imgur.com/vDiXRus.png "4x Super-Resolution")
+
+An example of 8x super-resolution:
+![Shrek 8x Super-Resolution](https://i.imgur.com/LAbhFEa.png "8x Super-Resolution")
 
 ## Setup Instructions
 All the programs were tested on the following setup:
