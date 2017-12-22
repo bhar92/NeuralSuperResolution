@@ -1,10 +1,24 @@
 # Real-time Super-Resolution for Video Quality Improvement
 
+## Table of Contents:
+- [Introduction](#introduction)
+- [Examples](#examples)
+- [Setup Instructions](#setup-instructions)
+  - [Training Machine details](#training-machine-details)
+  - [Software Installation](#software-installation)
+     - [OpenCV Installation](#opencv-installation)
+     - [Installing other dependencies](#install-the-other-dependencies)
+- [Usage](#usage)
+   - [Running the live webcam demo](#running-the-live-webcam-demo)
+   - [Training your own models](#training-your-own-models)
+      
+
 ## Introduction
 This repository contains a pytorch implementation of an algorithm for single image super-resolution applied to frames from a web-cam. The model uses the method described in [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](https://arxiv.org/abs/1603.08155) along with [Instance Normalization](https://arxiv.org/pdf/1607.08022.pdf). The code is based on the PyTorch Example code for [fast-neural-style](https://github.com/pytorch/examples/tree/master/fast_neural_style).
 
 The program is written in Python, and uses the Pytorch library for generating and loading the CNN models.
 
+## Examples
 An example of 4x super-resolution:
 ![Shrek 4x Super-Resolution](https://i.imgur.com/vDiXRus.png "4x Super-Resolution")
 
@@ -25,12 +39,13 @@ All the programs were tested on the following setup:
 
 ### Software Installation:
 
-#### Install the recommended packages
+#### OpenCV Installation
+##### Install the recommended packages
 ```
 $ sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk-3-dev libatlas-base-dev gfortran python2.7-dev python3.5-dev
 ```
 
-#### Download OpenCV source:
+##### Download OpenCV source:
 ```
 $ cd ~
 $ wget -O opencv.zip https://github.com/opencv/opencv/archive/3.3.0.zip
@@ -41,7 +56,7 @@ $ cd ~
 $ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.3.0.zip
 $ unzip opencv_contrib.zip
 ```
-#### Setup the Python virtualenv:
+##### Setup the Python virtualenv:
 1. Install the latest version of pip:
 ```
 $ sudo apt-get install python-pip && pip install --upgrade pip
@@ -74,7 +89,7 @@ workon supres
 ```
 pip install numpy
 ```
-#### Building OpenCV:
+##### Building OpenCV:
 1. Perform the cmake:
 
 ```
